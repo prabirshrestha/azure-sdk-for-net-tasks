@@ -10,10 +10,10 @@
                 <projectUrl>https://github.com/prabirshrestha/azure-sdk-for-net-tasks</projectUrl>
                 <requireLicenseAcceptance>false</requireLicenseAcceptance>
                 <tags>TPL Task Parallel Library Windows Azure Storage Client</tags>
+                <dependencies>
+                        <dependency id='WindowsAzure.Storage' version='1.7.0.0'/>
+                </dependencies>
         </metadata>
-        <dependencies>
-                <dependency id='WindowsAzure.Storage' version='1.7.0.0'/>
-        </dependencies>
         <files>
         	<file src="..\Working\StorageClientTaskExtensions.cs.pp" target = "content\StorageClientTaskExtensions.cs.pp" />
         </files>
