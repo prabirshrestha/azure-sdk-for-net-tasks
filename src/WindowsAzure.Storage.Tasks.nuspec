@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<package xmlns='http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd'>
+    <metadata>
+        <id>WindowsAzure.Storage.Tasks</id>
+        <title/>
+        <version>$version$</version>
+        <authors>Prabir Shrestha</authors>
+        <description>Task Parallel Library (TPL) extension methods for Windows Azure Storage Client library</description>
+        <language>en-US</language>
+        <projectUrl>https://github.com/prabirshrestha/azure-sdk-for-net-tasks</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags>TPL Task Parallel Library Windows Azure Storage Client</tags>
+    </metadata>
+	<files>
+		<file src="..\Working\StorageClientTaskExtensions.cs.pp" target = "content\StorageClientTaskExtensions.cs.pp" />
+	</files>
+</package>
