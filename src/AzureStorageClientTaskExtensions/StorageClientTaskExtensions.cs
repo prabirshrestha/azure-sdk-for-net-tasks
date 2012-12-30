@@ -313,9 +313,9 @@
             return Task.Factory.FromAsync<bool>(cloudBlob.BeginDeleteIfExists, cloudBlob.EndDeleteIfExists, state);
         }
 
-        public static Task DeleteIfExistsAsync(this CloudBlob cloudBlob)
+        public static Task<bool> DeleteIfExistsAsync(this CloudBlob cloudBlob)
         {
-            return cloudBlob.DeleteAsync(null);
+            return cloudBlob.DeleteIfExistsAsync(null);
         }
 
         #endregion
