@@ -313,9 +313,29 @@
             return Task.Factory.FromAsync<bool>(cloudBlob.BeginDeleteIfExists, cloudBlob.EndDeleteIfExists, state);
         }
 
-        public static Task DeleteIfExistsAsync(this CloudBlob cloudBlob)
+        public static Task<bool> DeleteIfExistsAsync(this CloudBlob cloudBlob)
         {
-            return cloudBlob.DeleteAsync(null);
+            return cloudBlob.DeleteIfExistsAsync(null);
+        }
+
+        public static Task FetchAttributesAsync(this CloudBlob cloudBlob, object state)
+        {
+            return Task.Factory.FromAsync(cloudBlob.BeginFetchAttributes, cloudBlob.EndFetchAttributes, state);
+        }
+
+        public static Task FetchAttributesAsync(this CloudBlob cloudBlob)
+        {
+            return cloudBlob.FetchAttributesAsync(null);
+        }
+
+        public static Task FetchAttributesAsync(this CloudBlob cloudBlob, BlobRequestOptions options, object state)
+        {
+            return Task.Factory.FromAsync(cloudBlob.BeginFetchAttributes, cloudBlob.EndFetchAttributes, options, state);
+        }
+
+        public static Task FetchAttributesAsync(this CloudBlob cloudBlob, BlobRequestOptions options)
+        {
+            return cloudBlob.FetchAttributesAsync(options, null);
         }
 
         #endregion
